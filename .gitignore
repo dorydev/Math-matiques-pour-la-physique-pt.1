@@ -1,0 +1,5 @@
+.sections/*.aux
+.Output/*.aux
+.Output/*.log
+.Output/*.synctex.gz
+.Output/*.toc
