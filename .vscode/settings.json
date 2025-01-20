@@ -1,0 +1,24 @@
+{
+    "latex-workshop.latex.outDir": "./Output",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex ➞ output in folder",
+            "tools": [
+                "pdflatex-output",
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex-output",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=Output",
+                "%DOC%"
+            ]
+        }
+    ],
+}
