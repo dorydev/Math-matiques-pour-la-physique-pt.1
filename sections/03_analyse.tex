@@ -1,0 +1,125 @@
+\section{Analyse}
+\subsection{Primitives et intégrations}
+
+Soit $f$ une fonction définie, continue et dérivable sur $[a,b]$. Alors $F$ est une primitive de $f$ ssi:
+$$
+    F(x) =  \int_{a}^{b} f(x) \,dx 
+$$
+
+\textbf{Primitives usuelles:} 
+
+\subsection{Equations différentielles}
+
+\subsubsection{EDL d'odre 1:}
+
+Soit $f$ une fonction définie sur $[a, b]$ et continue sur ce même intervalle. On appelle équation différentielle toute équation de la forme:
+
+$$
+    \frac{df(x)}{dx} + \alpha_0 f(x) = g(x)
+$$
+\textbf{Résolution:}
+
+\underline{Existence des solutions}: Si $g(x)$ est continue sur I, alors l'équation possède une infinité de solutions.\\
+\\
+\underline{Conditions}:  $f(x_0)=c, c\in \mathbb{R}$ (CI) ou $f(x_p) = c, c\in \mathbb{R}$ (CP), $\Rightarrow $ Si une CI ou une CP est donnée, alors l'équation différentielle formera un problème de Cauchy.\\
+L'ED sera de la forme:\\
+\\
+$
+\left\{
+    \begin{array}{ll}
+        \frac{df(x)}{dx} +
+            \alpha_0 f(x) = g(x) \\
+        f(x_0) = c
+    \end{array}
+\right.
+$
+ou
+ $
+\left\{
+    \begin{array}{ll}
+        \frac{df(x)}{dx} + \alpha_0 f(x) = g(x) \\
+        f(x_p) = c
+    \end{array}
+\right.
+$
+\\
+
+\textbf{Equation homogène:}
+
+Considérons $\frac{df(x)}{dx} + \alpha_0 f(x) = 0$$\iff$$\frac{df(x)}{f(x) dx} = \alpha_0$\\
+Soit, 
+$$f(x) = e^{(-\alpha_0 x + cte)} = A e^{-\alpha_0x}, A \in \mathbb{R}$
+
+\textbf{Solutions particulières:}
+
+Forme de $g(x)$:
+
+
+\begin{itemize}[label=\textbullet, font=\small]
+    \item $\alpha, (\alpha \in \mathbb{R})$ (1)
+    \item $P_n(x) \cos (\Omega_1x) + Q_m(x)\sin(\Omega_2x), P_n, Q_m \in \mathbf{R[X]}$ (2)
+    \item $e^{\alpha x}. P_n(x), \alpha\in \mathbb{R}$ (3)
+\end{itemize} \\
+
+Forme de $f_p(x)$:
+
+\begin{itemize}[label=\textbullet, font=\small]
+    \item $A, (A \in \mathbb{R})$ (1)
+    \item $R_n(x) \cos (\Omega_1x) + S_n(x)\sin(\Omega_1x) + T_m(x) \cos (\Omega_2x) + U_m(x)\sin(\Omega_2x)$ (2)
+    \item $\alpha \neq -a_0 :e^{\alpha x}. Q_n(x), \alpha = -a_0: e^{\alpha x}. x Q_n(x)$ (3)
+\end{itemize}
+
+\subsubsection{EDL d'ordre 2:}
+
+
+
+
+\subsection{Fonctions à plusieurs variables et dérivées partielles}
+
+Soit $f$ une fonction définie sur un intervalle $[a, b]$
+
+\subsection{Fonctions différentiables}
+
+
+
+\subsection{Développements limités et formule de Taylor}
+
+\subsubsection{Formule de Taylor-Lagrange}
+\textbf{Théorème}: Soit $f$ une fonction de classe $C^n$ sur $[a, b]$, $n+1$ fois dérivable sur $]a, b[$.
+Alors, $\exists c \in ]a, b[$ tq:
+
+$$
+    f(b) = f(a) + (b-a)f'(a) + \frac{(b-a)^2)}{2!}f''(a) + ... + \frac{(b-a)^n)}{n!}f^{(n)}(a) + \frac{(b-a)^{n+1}}{(n+1)!} f^{n+1}(c)
+$$
+
+\underline{Remarque}: pour $n=0$, apparaît le TAF (théorème des accroissements finis).\\
+
+\textbf{Formule de Mac Laurin-Lagrange:} Si $f$ est $C^n$ sur $]-\alpha, \alpha[$ avec $f^n$ dérivable sur $]-\alpha, \alpha[ - \{0\}$, alors $\forall x \in ]-\alpha, \alpha[, \exists \theta \in  ]0, 1[$ tq:
+
+$$
+    f(0) = f(0) + xf'(0) + \frac{x^2}{2!}f''(0) + ... + \frac{x^n}{n!}f^{(n)}(0) + \frac{x^{n+1}}{(n+1)!} f^{n+1}(\theta x)
+$$
+
+\textbf{Inégalités de Taylor-Lagrange:} En ajoutant $|f^{n+1}|$ majorée par $M$ sur $]a,b[$ on obtient:
+$$
+    | f(b) - ( f(a) + (b-a)f'(a) + \frac{(b-a)^2)}{2!}f''(a) + ... + \frac{(b-a)^n)}{n!}f^{(n)}(a) ) | \leq M\frac{(b-a)^{n+1}}{(n+1)!}
+$$
+
+\subsubsection{Formule de Taylor-Young:} 
+\textbf{Théorème:} Soit $f$ une fonction de classe $C^n$ sur $]x_0 - \alpha, x_0 + \alpha$ tq $\exists f^{(n)}(x_0)$.
+Alors pour $x \in ]x_0 - \alpha, x_0 + \alpha$:
+$$
+    f(x) = f(x_0) + (x-x_0)f'(x_0) + \frac{(x-x_0)^2)}{2!}f''(x_0) + ... + \frac{(x-x_0)^n)}{n!}f^{(n)}(x_0) \varepsilon (x)$$ avec $\lim\limits_{x \to x_0} \varepsilon (x) = 0
+$$ 
+
+\textbf{Développements limités usuels:}
+
+$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + ... + \frac{x^n}{n!} + x^n \varepsilon (x) = \sum_{k=0} ^{n} \frac{x^k}{k!} + x^n\varepsilon (x)$\\
+$\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} + ... + (-1)^n\frac{x^{2n}}{2n!} + x^{2n} \varepsilon (x)$\\
+$\sin(x) =  x - \frac{x^3}{3!} + \frac{x^5}{5!} + ... + (-1)^n\frac{x^{2n+1}}{2n+1!} + x^{2n+1} \varepsilon (x)$\\
+$\cosh(x) = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + ... + \frac{x^{2n}}{2n!} + x^{2n} \varepsilon (x)$\\
+$\sinh(x) = 1 + \frac{x^3}{3!} + \frac{x^5}{5!} + ... + \frac{x^{2n+1}}{2n+1!} + x^{2n+1} \varepsilon (x)$\\
+$\ln(1+x) = x -\frac{x^2}{2} + ... + (-1)^{n-1}\frac{x^n}{n} + x^n \varepsilon (x)$\\
+$\ln(1-x) = - x -\frac{x^2}{2} + ... + -\frac{x^n}{n} + x^n \varepsilon (x)$\\
+$\frac{1}{1-x} = 1 + x + x^2 + ... + x^n + x^n \varepsilon (x)$\\
+$\frac{1}{1+x} = 1 - x + x^2 + ... +(-1)^n x^n + x^n \varepsilon (x)$\\
