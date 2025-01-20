@@ -1,6 +1,359 @@
 \section{Algèbre}
 \subsection{Polynômes}
 \subsection{Introduction \& Espaces vectoriels}
-\subsection{Matrices \& Applications linéaires}
+\subsection{Matrices \& Applications en physique}
+
+\subsubsection{Généralités}
+\textbf{Définition:}
+Soit $\mathcal{A}  \in \mathcal{M}_{m,n}(\mathbb{R})$ une matrice de taille $m \times n$ à coefficients réels. 
+\[
+\mathcal{A}  = \begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{pmatrix}
+\]
+
+On appelle \textit{transposée} de $\mathcal{A}$ la matrice notée $\mathcal{A}^T$ de taille $n \times m$ telle que pour tout $i \in \{1, \ldots, m\}$ et $j \in \{1, \ldots, n\}$, on a $\mathcal{A}^T_{j,i} = \mathcal{A}_{i,j}$.
+
+
+\textbf{Multiplication de matrices:}
+
+Soient $\mathcal{A} \in \mathcal{M}_{m,n}(\mathbb{R})$ et $\mathcal{B} \in \mathcal{M}_{n,p}(\mathbb{R})$ deux matrices. Le produit $\mathcal{C} = \mathcal{A} \mathcal{B}$ est une matrice $\mathcal{C} \in \mathcal{M}_{m,p}(\mathbb{R})$ définie par :
+\[
+\mathcal{C}_{i,j} = \sum_{k=1}^{n} \mathcal{A}_{i,k} \mathcal{B}_{k,j}
+\]
+pour tout $i \in \{1, \ldots, m\}$ et $j \in \{1, \ldots, p\}$.
+
+\textbf{Exemple:}
+
+Soit les matrices suivantes :
+\[
+\mathcal{A} = \begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{pmatrix}, \quad
+\mathcal{B} = \begin{pmatrix}
+7 & 8 \\
+9 & 10 \\
+11 & 12
+\end{pmatrix}
+\]
+
+Calculons le produit $\mathcal{A} \mathcal{B}$ :
+\[
+\mathcal{C} = \mathcal{A} \mathcal{B} = \begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{pmatrix}
+\begin{pmatrix}
+7 & 8 \\
+9 & 10 \\
+11 & 12
+\end{pmatrix}
+\]
+
+\[
+\mathcal{C} = \begin{pmatrix}
+1 \cdot 7 + 2 \cdot 9 + 3 \cdot 11 & 1 \cdot 8 + 2 \cdot 10 + 3 \cdot 12 \\
+4 \cdot 7 + 5 \cdot 9 + 6 \cdot 11 & 4 \cdot 8 + 5 \cdot 10 + 6 \cdot 12
+\end{pmatrix}
+= \begin{pmatrix}
+58 & 64 \\
+139 & 154
+\end{pmatrix}
+\]
+
+\textbf{Propriétés de la transposée:}
+
+Pour deux matrices $\mathcal{A}$ et $\mathcal{B}$ de tailles compatibles, on a :
+\[
+(\mathcal{A} + \mathcal{B})^T = \mathcal{A}^T + \mathcal{B}^T
+\]
+\[
+(k\mathcal{A})^T = k\mathcal{A}^T \quad \text{pour tout scalaire } k
+\]
+\[
+(\mathcal{A} \mathcal{B})^T = \mathcal{B}^T \mathcal{A}^T
+\]
+
+\textbf{Inverse d'une matrice:}
+
+Une matrice $\mathcal{A} \in \mathcal{M}_{n,n}(\mathbb{R})$ est dite inversible s'il existe une matrice $\mathcal{B} \in \mathcal{M}_{n,n}(\mathbb{R})$ telle que :
+\[
+\mathcal{A} \mathcal{B} = \mathcal{B} \mathcal{A} = \mathcal{I}_n
+\]
+où $\mathcal{I}_n$ est la matrice identité de taille $n$. La matrice $\mathcal{B}$ est alors unique et est notée $\mathcal{A}^{-1}$.
+
+\textbf{Propriétés de l'inverse:}
+
+Pour deux matrices inversibles $\mathcal{A}$ et $\mathcal{B}$ de même taille, on a :
+\[
+(\mathcal{A} \mathcal{B})^{-1} = \mathcal{B}^{-1} \mathcal{A}^{-1}
+\]
+\[
+(\mathcal{A}^{-1})^{-1} = \mathcal{A}
+\]
+\[
+(\mathcal{A}^T)^{-1} = (\mathcal{A}^{-1})^T
+\]
+
+\textbf{Déterminant d'une matrice}
+
+Le déterminant est une fonction qui associe un scalaire à une matrice carrée. Le déterminant d'une matrice \(A\) est noté \(\det(A)\) ou \(|A|\). Pour une matrice \(2 \times 2\), le déterminant est calculé comme suit :
+\[
+\det\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix} = ad - bc
+\]
+Pour une matrice \(3 \times 3\), le déterminant est calculé comme suit :
+\[
+\det\begin{pmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{pmatrix} = a(ei - fh) - b(di - fg) + c(dh - eg)
+\]
+
+De manière plus générale, on a :
+
+
+\[
+\det(A) = \sum_{j=1}^{n} (-1)^{i+j} a_{ij} \det(A_{ij})
+\]
+
+
+\paragraph{Théorème de Cramer:}
+Si \(\det(A) \neq 0\), alors le système a une solution unique donnée par :
+\[
+X_i = \frac{\det(A_i)}{\det(A)}
+\]
+où \(A_i\) est la matrice obtenue en remplaçant la \(i\)-ème colonne de \(A\) par le vecteur \(B\).
+
+\paragraph{Théorème de Cayley-Hamilton:}
+Ce théorème affirme que toute matrice carrée satisfait son propre polynôme caractéristique. Soit \(A\) une matrice carrée \(n \times n\) et \(p(\lambda) = \det(\lambda I - A)\) son polynôme caractéristique. Le théorème de Cayley-Hamilton stipule que :
+\[
+p(A) = 0
+\]
+où \(0\) est la matrice nulle de même dimension que \(A\).
+
+\paragraph{Théorème de la matrice inverse:}
+Une matrice carrée \(A\) est inversible si et seulement si \(\det(A) \neq 0\). Si \(A\) est inversible, alors son inverse est donné par :
+\[
+A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
+\]
+où \(\text{adj}(A)\) est la comatrice de \(A\), c'est-à-dire la transposée de la matrice des cofacteurs de \(A\).
+
+
+\subsubsection{Matrices Jacobienne et Hessienne}
+
+
+\textbf{Définition:}
+
+Soit $\mathbf{f} : \mathbb{R}^n \to \mathbb{R}^m$ une fonction vectorielle différentiable. La matrice Jacobienne de $\mathbf{f}$, notée $\mathbf{J_f}$, est la matrice $m \times n$ des dérivées partielles de $\mathbf{f}$ :
+\[
+\mathbf{J_f} = \begin{pmatrix}
+\frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \cdots & \frac{\partial f_1}{\partial x_n} \\
+\frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \cdots & \frac{\partial f_2}{\partial x_n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{\partial f_m}{\partial x_1} & \frac{\partial f_m}{\partial x_2} & \cdots & \frac{\partial f_m}{\partial x_n}
+\end{pmatrix}
+\]
+
+\textbf{Exemple:}
+
+Considérons la fonction $\mathbf{f} : \mathbb{R}^2 \to \mathbb{R}^2$ définie par :
+\[
+\mathbf{f}(x, y) = \begin{pmatrix}
+x^2 + y^2 \\
+2xy
+\end{pmatrix}
+\]
+
+La matrice Jacobienne de $\mathbf{f}$ est :
+\[
+\mathbf{J_f} = \begin{pmatrix}
+\frac{\partial (x^2 + y^2)}{\partial x} & \frac{\partial (x^2 + y^2)}{\partial y} \\
+\frac{\partial (2xy)}{\partial x} & \frac{\partial (2xy)}{\partial y}
+\end{pmatrix}
+= \begin{pmatrix}
+2x & 2y \\
+2y & 2x
+\end{pmatrix}
+\]
+
+
+
+Soit $f : \mathbb{R}^n \to \mathbb{R}$ une fonction scalaire deux fois différentiable. La matrice Hessienne de $f$, notée $\mathbf{H_f}$, est la matrice $n \times n$ des dérivées partielles secondes de $f$ :
+\[
+\mathbf{H_f} = \begin{pmatrix}
+\frac{\partial^2 f}{\partial x_1^2} & \frac{\partial^2 f}{\partial x_1 \partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_1 \partial x_n} \\
+\frac{\partial^2 f}{\partial x_2 \partial x_1} & \frac{\partial^2 f}{\partial x_2^2} & \cdots & \frac{\partial^2 f}{\partial x_2 \partial x_n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{\partial^2 f}{\partial x_n \partial x_1} & \frac{\partial^2 f}{\partial x_n \partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_n^2}
+\end{pmatrix}
+\]
+
+\textbf{Exemple:}
+
+Considérons la fonction $f : \mathbb{R}^2 \to \mathbb{R}$ définie par :
+\[
+f(x, y) = x^2 + xy + y^2
+\]
+
+La matrice Hessienne de $f$ est :
+\[
+\mathbf{H_f} = \begin{pmatrix}
+\frac{\partial^2 (x^2 + xy + y^2)}{\partial x^2} & \frac{\partial^2 (x^2 + xy + y^2)}{\partial x \partial y} \\
+\frac{\partial^2 (x^2 + xy + y^2)}{\partial y \partial x} & \frac{\partial^2 (x^2 + xy + y^2)}{\partial y^2}
+\end{pmatrix}
+= \begin{pmatrix}
+2 & 1 \\
+1 & 2
+\end{pmatrix}
+\]
+
+\textbf{Application en physique:}
+Les matrices Jacobiennes sont utilisée en physique pour étudier des systèmes dynamiques (points de stabilité, ...), quant aux matrices Hessiennes, elles permettent d'analyser la courbure des surfaces et d'optimiser la détermination de la nature des points critiques. 
+
+
 \subsection{Noyau, Image}
 \subsection{Corps, Anneaux, Groupes}
+
+\subsubsection{Groupes}
+
+\textbf{Définition:}
+Un groupe est un ensemble $G$ muni d'une opération binaire $\cdot$ (souvent appelée multiplication) qui satisfait les axiomes suivants :
+\begin{itemize}
+    \item \textbf{Fermeture:} Pour tout $a, b \in G$, $a \cdot b \in G$.
+    \item \textbf{Associativité:} Pour tout $a, b, c \in G$, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$.
+    \item \textbf{Élément neutre:} Il existe un élément $e \in G$ tel que pour tout $a \in G$, $a \cdot e = e \cdot a = a$.
+    \item \textbf{Inverse:} Pour tout $a \in G$, il existe un élément $b \in G$ tel que $a \cdot b = b \cdot a = e$.
+\end{itemize}
+
+\textbf{Exemples:}
+\begin{itemize}
+    \item $(\mathbb{Z}, +)$ est un groupe abélien (commutatif).
+    \item $(\mathbb{R}^*, \cdot)$ est un groupe non abélien.
+\end{itemize}
+
+\textbf{Théorème de Lagrange:}
+Si $G$ est un groupe fini et $H$ est un sous-groupe de $G$, alors l'ordre de $H$ divise l'ordre de $G$.
+
+\subsubsection{Anneaux}
+
+\textbf{Définition:}
+Un anneau est un ensemble $R$ muni de deux opérations binaires, addition $(+)$ et multiplication $(\cdot)$, satisfaisant les axiomes suivants :
+\begin{itemize}
+    \item $(R, +)$ est un groupe abélien.
+    \item \textbf{Associativité de la multiplication:} Pour tout $a, b, c \in R$, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$.
+    \item \textbf{Distributivité:} Pour tout $a, b, c \in R$, $a \cdot (b + c) = (a \cdot b) + (a \cdot c)$ et $(a + b) \cdot c = (a \cdot c) + (b \cdot c)$.
+\end{itemize}
+
+\textbf{Exemples:}
+\begin{itemize}
+    \item $(\mathbb{Z}, +, \cdot)$ est un anneau commutatif.
+    \item $(\mathbb{M}_n(\mathbb{R}), +, \cdot)$ est un anneau non commutatif.
+\end{itemize}
+
+\textbf{Théorème:}
+Dans un anneau commutatif, l'ensemble des éléments inversibles forme un groupe multiplicatif.
+
+\subsubsection{Corps}
+
+\textbf{Définition:}
+Un corps est un anneau commutatif $(K, +, \cdot)$ dans lequel tout élément non nul possède un inverse multiplicatif.
+
+\textbf{Exemples:}
+\begin{itemize}
+    \item $(\mathbb{Q}, +, \cdot)$ est un corps.
+    \item $(\mathbb{R}, +, \cdot)$ est un corps.
+\end{itemize}
+
+\textbf{Théorème:}
+Tout corps est un anneau intègre, c'est-à-dire qu'il ne contient pas de diviseurs de zéro.
+
+\subsubsection{Théorie de Galois}
+
+\textbf{Définition:}
+La théorie de Galois étudie les extensions de corps et les solutions des équations polynomiales en utilisant les groupes de symétrie des racines.
+
+\textbf{Applications:}
+\begin{itemize}
+    \item \textbf{Résolution des équations polynomiales:} La théorie de Galois permet de déterminer si une équation polynomiale est résoluble par radicaux.
+    \item \textbf{Construction des corps finis:} Elle est utilisée pour comprendre la structure des corps finis et leurs applications en cryptographie.
+    \item \textbf{Problèmes de constructibilité:} Elle aide à résoudre des problèmes classiques de géométrie, comme la trisection de l'angle et la duplication du cube.
+\end{itemize}
+
+\textbf{Théorème fondamental de la théorie de Galois:}
+
+Il existe une correspondance bijective entre les sous-groupes du groupe de Galois d'une extension de corps et les sous-corps intermédiaires de cette extension.
+\subsubsection{Magmas}
+
+\textbf{Définition:}
+Un magma est un ensemble $M$ muni d'une opération binaire $\cdot : M \times M \to M$.
+
+\subsubsection{Monoïdes}
+
+\textbf{Définition:}
+Un monoïde est un magma $(M, \cdot)$ qui satisfait les axiomes suivants :
+\begin{itemize}
+    \item \textbf{Associativité:} Pour tout $a, b, c \in M$, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$.
+    \item \textbf{Élément neutre:} Il existe un élément $e \in M$ tel que pour tout $a \in M$, $a \cdot e = e \cdot a = a$.
+\end{itemize}
+
+\subsubsection{Semi-groupes}
+
+\textbf{Définition:}
+Un semi-groupe est un magma $(S, \cdot)$ qui satisfait l'axiome d'associativité :
+\begin{itemize}
+    \item \textbf{Associativité:} Pour tout $a, b, c \in S$, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$.
+\end{itemize}
+
+\subsubsection{Anneaux intègres}
+
+\textbf{Définition:}
+Un anneau intègre est un anneau commutatif $(R, +, \cdot)$ sans diviseurs de zéro, c'est-à-dire que pour tout $a, b \in R$, si $a \cdot b = 0$, alors $a = 0$ ou $b = 0$.
+
+\subsubsection{Corps finis}
+
+\textbf{Définition:}
+Un corps fini est un corps $(K, +, \cdot)$ contenant un nombre fini d'éléments.
+
+\textbf{Exemples:}
+\begin{itemize}
+    \item $\mathbb{F}_p$, le corps des entiers modulo un nombre premier $p$.
+    \item $\mathbb{F}_{p^n}$, une extension de degré $n$ du corps $\mathbb{F}_p$.
+\end{itemize}
+
+\subsubsection{Algèbres}
+
+\textbf{Définition:}
+Une algèbre sur un corps $K$ est un espace vectoriel $A$ sur $K$ muni d'une opération bilinéaire $\cdot : A \times A \to A$.
+
+\textbf{Exemples:}
+\begin{itemize}
+    \item Les algèbres de matrices $\mathbb{M}_n(K)$.
+    \item Les algèbres de polynômes $K[x]$.
+\end{itemize}
+
+\subsubsection{Algèbres associatives}
+
+\textbf{Définition:}
+Une algèbre associative est une algèbre $(A, \cdot)$ telle que pour tout $a, b, c \in A$, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$.
+
+\subsubsection{Algèbres commutatives}
+
+\textbf{Définition:}
+Une algèbre commutative est une algèbre $(A, \cdot)$ telle que pour tout $a, b \in A$, $a \cdot b = b \cdot a$.
+
+\subsubsection{Algèbres de Lie}
+
+\textbf{Définition:}
+Une algèbre de Lie est un espace vectoriel $L$ muni d'une opération bilinéaire $[\cdot, \cdot] : L \times L \to L$ appelée crochet de Lie, satisfaisant les axiomes suivants :
+\begin{itemize}
+    \item \textbf{Antisymétrie:} Pour tout $x, y \in L$, $[x, y] = -[y, x]$.
+    \item \textbf{Identité de Jacobi:} Pour tout $x, y, z \in L$, $[x, [y, z]] + [y, [z, x]] + [z, [x, y]] = 0$.
+\end{itemize}

@@ -1,13 +1,4 @@
 \section{Analyse}
-\subsection{Primitives et intégrations}
-
-Soit $f$ une fonction définie, continue et dérivable sur $[a,b]$. Alors $F$ est une primitive de $f$ ssi:
-$$
-    F(x) =  \int_{a}^{b} f(x) \,dx 
-$$
-
-\textbf{Primitives usuelles:} 
-
 \subsection{Equations différentielles}
 
 \subsubsection{EDL d'odre 1:}
@@ -20,7 +11,7 @@ $$
 \textbf{Résolution:}
 
 \underline{Existence des solutions}: Si $g(x)$ est continue sur I, alors l'équation possède une infinité de solutions.\\
-\\
+
 \underline{Conditions}:  $f(x_0)=c, c\in \mathbb{R}$ (CI) ou $f(x_p) = c, c\in \mathbb{R}$ (CP), $\Rightarrow $ Si une CI ou une CP est donnée, alors l'équation différentielle formera un problème de Cauchy.\\
 L'ED sera de la forme:\\
 \\
@@ -48,7 +39,7 @@ $
 
 Considérons $\frac{df(x)}{dx} + \alpha_0 f(x) = 0$$\iff$$\frac{df(x)}{f(x) dx} = \alpha_0$\\
 Soit, 
-$$f(x) = e^{(-\alpha_0 x + cte)} = A e^{-\alpha_0x}, A \in \mathbb{R}$
+$$f(x) = e^{(-\alpha_0 x + cte)} = A e^{-\alpha_0x}, A \in \mathbb{R}$$
 
 \textbf{Solutions particulières:}
 
@@ -59,7 +50,7 @@ Forme de $g(x)$:
     \item $\alpha, (\alpha \in \mathbb{R})$ (1)
     \item $P_n(x) \cos (\Omega_1x) + Q_m(x)\sin(\Omega_2x), P_n, Q_m \in \mathbf{R[X]}$ (2)
     \item $e^{\alpha x}. P_n(x), \alpha\in \mathbb{R}$ (3)
-\end{itemize} \\
+\end{itemize}
 
 Forme de $f_p(x)$:
 
@@ -69,18 +60,254 @@ Forme de $f_p(x)$:
     \item $\alpha \neq -a_0 :e^{\alpha x}. Q_n(x), \alpha = -a_0: e^{\alpha x}. x Q_n(x)$ (3)
 \end{itemize}
 
+La solution finale de l'EDL d'ordre 1 sera $f_P(x) + f_H(x)$
+
 \subsubsection{EDL d'ordre 2:}
 
+Une équation différentielle linéaire d'ordre 2 est de la forme:
+$$
+    a_2(x) \frac{d^2y}{dx^2} + a_1(x) \frac{dy}{dx} + a_0(x) y = g(x)
+$$
+
+\textbf{Equation homogène:}
+
+Si $g(x) = 0$, l'équation devient:
+$$
+    a_2(x) \frac{d^2y}{dx^2} + a_1(x) \frac{dy}{dx} + a_0(x) y = 0
+$$
+
+\textbf{Résolution:}
+
+1. \underline{Cas à coefficients constants:}
+
+Si $a_2, a_1, a_0$ sont constants, on résout l'équation caractéristique associée:
+$$
+    a_2 r^2 + a_1 r + a_0 = 0
+$$
+Les solutions de cette équation caractéristique déterminent la forme de la solution générale de l'équation homogène.
+
+2. \underline{Cas général:}
+
+Pour des coefficients non constants, on utilise des méthodes comme la variation des paramètres ou la transformation de Laplace.
 
 
+\textbf{Formes du second membre:}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Forme de $g(x)$ & Forme de $f_P(x)$ \\ \hline
+$\alpha$ & $A$ \\ \hline
+$P_n(x)$ & $Q_n(x)$ \\ \hline
+$e^{\beta x}$ & $B e^{\beta x}$ \\ \hline
+$\cos(\omega x)$ ou $\sin(\omega x)$ & $C \cos(\omega x) + D \sin(\omega x)$ \\ \hline
+$e^{\beta x} P_n(x)$ & $e^{\beta x} R_n(x)$ \\ \hline
+$P_n(x) \cos(\omega x) + Q_m(x) \sin(\omega x)$ & $S_n(x) \cos(\omega x) + T_m(x) \sin(\omega x)$ \\ \hline
+\end{tabular}
+\end{table}
+
+La solution générale de l'équation non homogène est la somme de la solution générale de l'équation homogène et d'une solution particulière de l'équation non homogène, c'est à dire:
+
+$$
+    y(x) = y_H(x) + y_P(x)  
+$$
 
 \subsection{Fonctions à plusieurs variables et dérivées partielles}
 
-Soit $f$ une fonction définie sur un intervalle $[a, b]$
+\subsubsection{Rappels}
 
-\subsection{Fonctions différentiables}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Fonction & Dérivée & Domaine de dérivabilité \\ \hline
+$c$ (cste) & $0$ & $\mathbb{R}$ \\ \hline
+$x^n$ & $nx^{n-1}$ & $\mathbb{R}$ \\ \hline
+$e^x$ & $e^x$ & $\mathbb{R}$ \\ \hline
+$\ln(x)$ & $\frac{1}{x}$ & $]0, +\infty[$ \\ \hline
+$\sin(x)$ & $\cos(x)$ & $\mathbb{R}$ \\ \hline
+$\cos(x)$ & $-\sin(x)$ & $\mathbb{R}$ \\ \hline
+$\tan(x)$ & $\sec^2(x)$ & $x \neq \frac{\pi}{2} + k\pi, k \in \mathbb{Z}$ \\ \hline
+$u \pm v$ & $u' \pm v'$ & $\mathbb{R}$ \\ \hline
+$uv$ & $u'v + uv'$ & $\mathbb{R}$ \\ \hline
+$\frac{u}{v}$ & $\frac{u'v - uv'}{v^2}$ & $v \neq 0$ \\ \hline
+$u(v(x))$ & $u'(v(x)) \cdot v'(x)$ & $\mathbb{R}$ \\ \hline
+\end{tabular}
+\caption{Dérivées usuelles de fonctions et d'opérations sur les fonctions}
+\end{table}
+
+\subsubsection{Dérivées partielles}
+
+Soit $f$ une fonction définie de $\mathbb{R}^n$ à $\mathbb{R}^p$.
+Une fonction de plusieurs variables est une fonction qui dépend de deux ou plusieurs variables. La dérivée partielle de $f$ par rapport à $x$, notée $\frac{\partial f}{\partial x}$, mesure le taux de variation de $f$ lorsque $x$ varie et $y$ reste constant. De même, la dérivée partielle de $f$ par rapport à $y$, notée $\frac{\partial f}{\partial y}$, mesure le taux de variation de $f$ lorsque $y$ varie et $x$ reste constant.
 
 
+Pour une fonction $f(x, y)$, les dérivées partielles sont définies comme suit:
+$$
+\frac{\partial f}{\partial x} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x, y) - f(x, y)}{\Delta x}
+$$
+$$
+\frac{\partial f}{\partial y} = \lim_{\Delta y \to 0} \frac{f(x, y + \Delta y) - f(x, y)}{\Delta y}
+$$
+
+
+
+\subsubsection{Dérivées partielles d'ordre supérieur}
+
+Les dérivées partielles d'ordre supérieur sont obtenues en dérivant plusieurs fois par rapport à différentes variables. Par exemple, pour une fonction $f(x, y)$, les dérivées partielles d'ordre supérieur incluent:
+
+$$
+\frac{\partial^2 f}{\partial x^2} = \frac{\partial}{\partial x} \left( \frac{\partial f}{\partial x} \right)
+$$
+
+$$
+\frac{\partial^2 f}{\partial y^2} = \frac{\partial}{\partial y} \left( \frac{\partial f}{\partial y} \right)
+$$
+
+$$
+\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial}{\partial x} \left( \frac{\partial f}{\partial y} \right)
+$$
+
+$$
+\frac{\partial^2 f}{\partial y \partial x} = \frac{\partial}{\partial y} \left( \frac{\partial f}{\partial x} \right)
+$$
+
+En général, pour une fonction $f(x_1, x_2, \ldots, x_n)$, la dérivée partielle d'ordre $k$ par rapport aux variables $x_{i_1}, x_{i_2}, \ldots, x_{i_k}$ est notée:
+
+$$
+\frac{\partial^k f}{\partial x_{i_1} \partial x_{i_2} \ldots \partial x_{i_k}}
+$$
+
+
+\subsection{Primitives et intégrations}
+
+Soit $f$ une fonction définie, continue et dérivable sur $[a,b]$. Alors $F$ est une primitive de $f$ ssi:
+$$
+    F(x) =  \int_{a}^{b} f(x) \,dx 
+$$
+
+
+\subsubsection{Intégrales multiples}
+
+Les intégrales multiples permettent de généraliser la notion d'intégrale à des fonctions de plusieurs variables. Elles sont utilisées pour calculer des volumes, des aires, des masses, etc.
+
+\subsubsection{Intégrale double}
+
+Soit $f(x, y)$ une fonction continue sur un domaine $D \subset \mathbb{R}^2$. L'intégrale double de $f$ sur $D$ est définie par:
+$$
+\iint_D f(x, y) \, dA
+$$
+où $dA$ représente un élément de surface infinitésimal.
+
+\textbf{Théorème de Fubini:}
+
+Si $f$ est continue sur un rectangle $R = [a, b] \times [c, d]$, alors:
+$$
+\iint_R f(x, y) \, dA = \int_a^b \left( \int_c^d f(x, y) \, dy \right) dx = \int_c^d \left( \int_a^b f(x, y) \, dx \right) dy
+$$
+
+\subsubsection{Intégrale triple}
+
+Soit $f(x, y, z)$ une fonction continue sur un domaine $D \subset \mathbb{R}^3$. L'intégrale triple de $f$ sur $D$ est définie par:
+$$
+\iiint_D f(x, y, z) \, dV
+$$
+où $dV$ représente un élément de volume infinitésimal.
+
+\textbf{Théorème de Fubini (extension):}
+
+Si $f$ est continue sur un parallélépipède $R = [a, b] \times [c, d] \times [e, f]$, alors:
+$$
+\iiint_R f(x, y, z) \, dV = \int_a^b \int_c^d \int_e^f f(x, y, z) \, dz \, dy \, dx
+$$
+
+\subsubsection{Changement de variables}
+
+Pour simplifier le calcul des intégrales multiples, on peut utiliser un changement de variables. Soit $u = g(x, y)$ et $v = h(x, y)$ un changement de variables bijectif et différentiable avec un jacobien non nul. Alors:
+$$
+\iint_D f(x, y) \, dA = \iint_{D'} f(g^{-1}(u, v)) \left| \frac{\partial(x, y)}{\partial(u, v)} \right| \, du \, dv
+$$
+où $\left| \frac{\partial(x, y)}{\partial(u, v)} \right|$ est le déterminant du jacobien du changement de variables.
+
+\subsubsection{Intégrales de Riemann}
+
+Les intégrales de Riemann généralisent la notion d'intégrale à des fonctions de plusieurs variables. Soit $f$ une fonction définie sur un domaine $D \subset \mathbb{R}^n$. L'intégrale de Riemann de $f$ sur $D$ est définie comme la limite de la somme de Riemann:
+$$
+\int_D f(\mathbf{x}) \, d\mathbf{x} = \lim_{\|P\| \to 0} \sum_{i=1}^m f(\mathbf{x}_i^*) \Delta V_i
+$$
+où $P$ est une partition de $D$, $\mathbf{x}_i^*$ est un point dans le $i$-ième sous-domaine, et $\Delta V_i$ est le volume du $i$-ième sous-domaine.
+
+\textbf{Conditions de Riemann:}
+
+Pour que l'intégrale de Riemann existe, il faut que $f$ soit bornée et que la somme des volumes des sous-domaines tende vers zéro lorsque la norme de la partition tend vers zéro.
+
+
+
+
+
+\subsection{Opérateur Nabla}
+
+L'opérateur nabla, noté $\nabla$, est un opérateur différentiel vectoriel utilisé en calcul vectoriel. Il est défini comme suit en coordonnées cartésiennes $(x, y, z)$:
+
+$$
+\nabla = \left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right)
+$$
+
+L'opérateur nabla est utilisé pour définir plusieurs opérations importantes en analyse vectorielle, notamment le gradient, la divergence et le rotationnel.
+
+\textbf{Gradient:}
+
+Le gradient d'une fonction scalaire $f(x, y, z)$ est un vecteur noté $\nabla f$ et défini par:
+$$
+\nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right)
+$$
+Le gradient indique la direction de la plus grande variation de la fonction et sa norme représente le taux de variation maximal.
+
+\textbf{Divergence:}
+
+La divergence d'un champ vectoriel $\mathbf{F} = (F_1, F_2, F_3)$ est un scalaire noté $\nabla \cdot \mathbf{F}$ et défini par:
+$$
+\nabla \cdot \mathbf{F} = \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z}
+$$
+La divergence mesure le taux de variation du flux sortant d'un point dans un champ vectoriel.
+
+\textbf{Rotationnel:}
+
+Le rotationnel d'un champ vectoriel $\mathbf{F} = (F_1, F_2, F_3)$ est un vecteur noté $\nabla \times \mathbf{F}$ et défini par:
+$$
+\nabla \times \mathbf{F} = \left( \frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z}, \frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x}, \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y} \right)
+$$
+Le rotationnel mesure la tendance d'un champ vectoriel à tourner autour d'un point.
+
+\subsubsection{Gradient, divergence et rotationnel en coordonnées cylindriques et sphériques}
+
+
+\subsubsection{Annexes:}
+\textbf{Théorème de Green:}
+
+Le théorème de Green relie une intégrale curviligne autour d'une courbe fermée à une intégrale double sur la région délimitée par cette courbe.
+\\
+Soit $C$ une courbe fermée simple et $D$ la région délimitée par $C$. Si $P$ et $Q$ sont des fonctions ayant des dérivées partielles continues sur une région qui contient $D$, alors:
+
+$$
+\oint_C (P \, dx + Q \, dy) = \iint_D \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \, dA
+$$
+
+En d'autres termes, l'intégrale curviligne de $P \, dx + Q \, dy$ autour de $C$ est égale à l'intégrale double de $\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}$ sur $D$.
+
+\textbf{Applications du théorème de Green:}
+
+1. Calcul de l'aire d'une région plane:
+$$
+A = \iint_D \, dA = \frac{1}{2} \oint_C (x \, dy - y \, dx)
+$$
+
+2. Calcul du flux d'un champ vectoriel à travers une courbe fermée:
+$$
+\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_D (\nabla \times \mathbf{F}) \cdot \mathbf{k} \, dA
+$$
+où $\mathbf{F} = (P, Q)$ et $\mathbf{k}$ est le vecteur unitaire normal à la surface.
 
 \subsection{Développements limités et formule de Taylor}
 
@@ -92,7 +319,8 @@ $$
     f(b) = f(a) + (b-a)f'(a) + \frac{(b-a)^2)}{2!}f''(a) + ... + \frac{(b-a)^n)}{n!}f^{(n)}(a) + \frac{(b-a)^{n+1}}{(n+1)!} f^{n+1}(c)
 $$
 
-\underline{Remarque}: pour $n=0$, apparaît le TAF (théorème des accroissements finis).\\
+\underline{Remarque}: pour $n=0$, apparaît le TAF (théorème des accroissements finis).
+\\
 
 \textbf{Formule de Mac Laurin-Lagrange:} Si $f$ est $C^n$ sur $]-\alpha, \alpha[$ avec $f^n$ dérivable sur $]-\alpha, \alpha[ - \{0\}$, alors $\forall x \in ]-\alpha, \alpha[, \exists \theta \in  ]0, 1[$ tq:
 
@@ -108,9 +336,7 @@ $$
 \subsubsection{Formule de Taylor-Young:} 
 \textbf{Théorème:} Soit $f$ une fonction de classe $C^n$ sur $]x_0 - \alpha, x_0 + \alpha$ tq $\exists f^{(n)}(x_0)$.
 Alors pour $x \in ]x_0 - \alpha, x_0 + \alpha$:
-$$
-    f(x) = f(x_0) + (x-x_0)f'(x_0) + \frac{(x-x_0)^2)}{2!}f''(x_0) + ... + \frac{(x-x_0)^n)}{n!}f^{(n)}(x_0) \varepsilon (x)$$ avec $\lim\limits_{x \to x_0} \varepsilon (x) = 0
-$$ 
+$$f(x) = f(x_0) + (x-x_0)f'(x_0) + \frac{(x-x_0)^2)}{2!}f''(x_0) + ... + \frac{(x-x_0)^n)}{n!}f^{(n)}(x_0) \varepsilon (x)$$ avec $\lim\limits_{x \to x_0} \varepsilon (x) = 0$
 
 \textbf{Développements limités usuels:}
 
