@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.17)  20 JAN 2025 15:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.17)  21 JAN 2025 08:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Doriane/Documents/LaTex/Mathématiques pour la physique pt.1/main."
-(c:/Users/Doriane/Documents/LaTex/Mathématiques pour la physique pt.1/main..tex
+**"c:/Users/Doriane/Documents/LaTex/Mathématiques pour la physique pt.1/main"
+(c:/Users/Doriane/Documents/LaTex/Mathématiques pour la physique pt.1/main.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
 (c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -165,8 +165,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count303
 \l__pdf_internal_box=\box55
-) (Output/main..aux (Output/sections/00_introduction.aux) (Output/sections/01_tableofcontent.aux) (Output/sections/02_algebre.aux) (Output/sections/03_analyse.aux) (Output/sections/04_preuves.aux))
-\openout1 = `main..aux'.
+) (Output/main.aux (Output/sections/00_introduction.aux) (Output/sections/01_tableofcontent.aux) (Output/sections/02_algebre.aux) (Output/sections/03_analyse.aux) (Output/sections/04_preuves.aux))
+\openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -222,9 +222,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 \openout2 = `sections/01_tableofcontent.aux'.
 
- (./sections/01_tableofcontent.tex (Output/main..toc)
+ (./sections/01_tableofcontent.tex (Output/main.toc)
 \tf@toc=\write3
-\openout3 = `main..toc'.
+\openout3 = `main.toc'.
 
 )
 
@@ -233,44 +233,63 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
-
-[4]
 \openout2 = `sections/02_algebre.aux'.
 
  (./sections/02_algebre.tex
+Overfull \hbox (10.78568pt too wide) in paragraph at lines 39--41
+[]\OT1/cmr/bx/n/10 Th^^Seor^^Reme de la d^^Secomposition en ^^Sel^^Sements sim-ples: \OT1/cmr/m/n/10 Soit $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$ un polyn^ome
+ []
 
-[5
+
+
+[4
 
 
 
 ]
+Overfull \hbox (4.7579pt too wide) in paragraph at lines 68--69
+[]\OT1/cmr/bx/n/10 Distributivit^^Se de la mul-ti-pli-ca-tion scalaire par rap-port ^^Ra l'addition
+ []
+
+
+Overfull \hbox (4.7579pt too wide) in paragraph at lines 69--70
+[]\OT1/cmr/bx/n/10 Distributivit^^Se de la mul-ti-pli-ca-tion scalaire par rap-port ^^Ra l'addition
+ []
+
+
+Overfull \hbox (0.46686pt too wide) in paragraph at lines 87--89
+[]\OT1/cmr/bx/n/10 Base: \OT1/cmr/m/n/10 Une base d'un es-pace vec-to-riel $\OML/cmm/m/it/10 V$ \OT1/cmr/m/n/10 est un en-sem-ble de vecteurs lin^^Seairement
+ []
+
+
+
+[5{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 [6]
 
 [7]
-Overfull \hbox (2.3338pt too wide) in paragraph at lines 218--220
+
+[8]
+Overfull \hbox (2.3338pt too wide) in paragraph at lines 307--309
 \OT1/cmr/m/n/10 ces Hessi-ennes, elles per-me-t-tent d'analyser la cour-bure des sur-faces et d'optimiser
  []
 
 
 
-[8{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-
 [9]
-Overfull \hbox (19.85443pt too wide) in paragraph at lines 308--311
-\OT1/cmr/bx/n/10 D^^Sefinition: \OT1/cmr/m/n/10 Un semi-groupe est un magma $(\OML/cmm/m/it/10 S; \OMS/cmsy/m/n/10 ^^A\OT1/cmr/m/n/10 )$ qui sat-is-fait l'axiome d'associativit^^Se
- []
-
-
 
 [10]
-Overfull \hbox (2.62917pt too wide) in paragraph at lines 357--358
+
+[11]
+
+[12]
+Overfull \hbox (2.62917pt too wide) in paragraph at lines 489--490
 []\OT1/cmr/bx/n/10 Identit^^Se de Ja-cobi: \OT1/cmr/m/n/10 Pour tout $\OML/cmm/m/it/10 x; y; z \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 L$\OT1/cmr/m/n/10 , $[\OML/cmm/m/it/10 x; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 y; z\OT1/cmr/m/n/10 ]] + [\OML/cmm/m/it/10 y; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 z; x\OT1/cmr/m/n/10 ]] + [\OML/cmm/m/it/10 z; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 ]] =
  []
 
 )
 
-[11]
+[13]
 \openout2 = `sections/03_analyse.aux'.
 
  (./sections/03_analyse.tex
@@ -290,7 +309,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--37
 
 
 
-[12
+[14
 
 
 
@@ -300,71 +319,71 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[13]
-
-[14]
-
 [15]
 
 [16]
-Overfull \hbox (5.63153pt too wide) in paragraph at lines 283--283
+
+[17]
+
+[18]
+Overfull \hbox (5.63153pt too wide) in paragraph at lines 285--285
 []\OT1/cmr/bx/n/10 Gradient, di-ver-gence et ro-ta-tion-nel en co-or-donn^^Sees cylin-driques
  []
 
 
 
-[17]
-Overfull \hbox (17.33835pt too wide) detected at line 320
+[19]
+Overfull \hbox (17.33835pt too wide) detected at line 322
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ) + (\OML/cmm/m/it/10 b \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ) + []\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ) + []\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 c\OT1/cmr/m/n/10 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--324
+Underfull \hbox (badness 10000) in paragraph at lines 324--326
 
  []
 
 
-Overfull \hbox (7.81738pt too wide) detected at line 334
+Overfull \hbox (7.81738pt too wide) detected at line 336
 \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ) + (\OML/cmm/m/it/10 b \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ) + []\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ))\OMS/cmsy/m/n/10 j ^^T \OML/cmm/m/it/10 M[]
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 343--22
+Underfull \hbox (badness 10000) in paragraph at lines 345--22
 
  []
 
 
 
-[18]
+[20]
 
-[19]
+[21]
 \openout2 = `sections/04_preuves.aux'.
 
  (./sections/04_preuves.tex)
 
-[20
+[22
 
 
 
-] (Output/main..aux (Output/sections/00_introduction.aux) (Output/sections/01_tableofcontent.aux) (Output/sections/02_algebre.aux) (Output/sections/03_analyse.aux) (Output/sections/04_preuves.aux))
+] (Output/main.aux (Output/sections/00_introduction.aux) (Output/sections/01_tableofcontent.aux) (Output/sections/02_algebre.aux) (Output/sections/03_analyse.aux) (Output/sections/04_preuves.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4067 strings out of 473206
- 63934 string characters out of 5720440
- 465294 words of memory out of 5000000
+ 4065 strings out of 473206
+ 63912 string characters out of 5720440
+ 466291 words of memory out of 5000000
  27223 multiletter control sequences out of 15000+600000
  568636 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,11n,65p,588b,217s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,11n,65p,587b,217s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Output/main..pdf (20 pages, 261615 bytes).
+Output written on Output/main.pdf (22 pages, 269877 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 172 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,95 @@
 \section{Algèbre}
 \subsection{Polynômes}
+\textbf{Définition:}
+Un polynôme $P(x)$ à coefficients dans un corps $K$ est une expression de la forme :
+\[
+P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
+\]
+où $a_i \in K$ pour tout $i$ et $a_n \neq 0$. Le degré de $P(x)$ est $n$.
+
+\textbf{Théorème fondamental de l'algèbre:}
+Tout polynôme non constant à coefficients complexes a au moins une racine complexe.
+
+\textbf{Division de polynômes:}
+Soient $A(x)$ et $B(x)$ deux polynômes avec $B(x) \neq 0$. Il existe des polynômes uniques $Q(x)$ et $R(x)$ tels que :
+\[
+A(x) = B(x) Q(x) + R(x)
+\]
+où le degré de $R(x)$ est strictement inférieur au degré de $B(x)$.
+
+\textbf{Décomposition en éléments simples:}
+Tout polynôme $P(x)$ à coefficients réels peut être décomposé en produit de polynômes de degré 1 et de polynômes quadratiques irréductibles sur $\mathbb{R}$. Sur $\mathbb{C}$, tout polynôme peut être décomposé en produit de polynômes de degré 1.
+
+\textbf{Exemple:}
+Soit $P(x) = x^3 - 6x^2 + 11x - 6$. Les racines de $P(x)$ sont $x = 1, 2, 3$. On peut écrire :
+\[
+P(x) = (x - 1)(x - 2)(x - 3)
+\]
+
+\textbf{Théorème de Bézout:}
+Soient $A(x)$ et $B(x)$ deux polynômes non nuls. Le plus grand commun diviseur (PGCD) de $A(x)$ et $B(x)$ peut être exprimé comme une combinaison linéaire de $A(x)$ et $B(x)$ :
+\[
+d(x) = A(x) u(x) + B(x) v(x)
+\]
+où $d(x)$ est le PGCD et $u(x)$, $v(x)$ sont des polynômes.
+
+\textbf{Théorème de la racine multiple:}
+Un polynôme $P(x)$ a une racine multiple $r$ si et seulement si $r$ est aussi une racine de sa dérivée $P'(x)$.
+
+\textbf{Théorème de la décomposition en éléments simples:}
+Soit $P(x)$ un polynôme à coefficients réels. On peut écrire :
+\[
+P(x) = c (x - r_1)^{m_1} (x - r_2)^{m_2} \cdots (x^2 + b_1 x + c_1)^{n_1} (x^2 + b_2 x + c_2)^{n_2} \cdots
+\]
+où $r_i$ sont les racines réelles, $x^2 + b_i x + c_i$ sont les polynômes quadratiques irréductibles, et $c$ est une constante.
+
+\textbf{Exemple:}
+Soit $P(x) = x^4 - 5x^2 + 6$. On peut écrire :
+\[
+P(x) = (x^2 - 2)(x^2 - 3)
+\]
+
 \subsection{Introduction \& Espaces vectoriels}
+
+\textbf{Définition:}
+Un espace vectoriel sur un corps $K$ est un ensemble $E$ muni de deux opérations :
+\begin{itemize}
+    \item \textbf{Addition:} Une opération $+ : V \times V \to V$ qui associe à chaque couples de vecteurs $(u, v)$ un vecteur $u + v$.
+    \item \textbf{Multiplication:} Une opération $\cdot : K \times V \to V$ qui associe à chaque scalaire $a \in K$ et chaque vecteur $v \in V$ un vecteur $a \cdot v$.
+\end{itemize}
+$\forall$ $u, v, w \in V$ et tout $a, b \in K$ :
+\begin{itemize}
+    \item \textbf{Associativité de l'addition:} $(u + v) + w = u + (v + w)$.
+    \item \textbf{Élément neutre de l'addition:} Il existe un élément $0 \in V$ tel que $u + 0 = u$.
+    \item \textbf{Inverse de l'addition:} Pour tout $u \in V$, il existe un élément $-u \in V$ tel que $u + (-u) = 0$.
+    \item \textbf{Commutativité de l'addition:} $u + v = v + u$.
+    \item \textbf{Compatibilité de la multiplication scalaire avec la multiplication dans $K$:} $a \cdot (b \cdot v) = (a \cdot b) \cdot v$.
+    \item \textbf{Élément neutre de la multiplication scalaire:} $1 \cdot v = v$ pour tout $v \in V$, où $1$ est l'élément neutre de $K$.
+    \item \textbf{Distributivité de la multiplication scalaire par rapport à l'addition vectorielle:} $a \cdot (u + v) = a \cdot u + a \cdot v$.
+    \item \textbf{Distributivité de la multiplication scalaire par rapport à l'addition scalaire:} $(a + b) \cdot v = a \cdot v + b \cdot v$.
+\end{itemize}
+
+\textbf{Exemples:}
+\begin{itemize}
+    \item L'ensemble $\mathbb{R}^n$ des $n$-uplets de réels est un espace vectoriel sur $\mathbb{R}$.
+    \item L'ensemble des polynômes à coefficients dans $\mathbb{R}$ est un espace vectoriel sur $\mathbb{R}$.
+\end{itemize}
+
+\textbf{Théorème:}
+Tout sous-espace vectoriel d'un espace vectoriel est lui-même un espace vectoriel.
+
+\textbf{Combinaison linéaire:}
+Une combinaison linéaire de vecteurs $v_1, v_2, \ldots, v_n \in V$ est une expression de la forme $a_1 v_1 + a_2 v_2 + \cdots + a_n v_n$ où $a_1, a_2, \ldots, a_n \in K$.
+
+\textbf{Indépendance linéaire:}
+Les vecteurs $v_1, v_2, \ldots, v_n \in V$ sont linéairement indépendants si la seule combinaison linéaire qui donne le vecteur nul est la combinaison triviale : $a_1 v_1 + a_2 v_2 + \cdots + a_n v_n = 0$ implique $a_1 = a_2 = \cdots = a_n = 0$.
+
+\textbf{Base:}
+Une base d'un espace vectoriel $V$ est un ensemble de vecteurs linéairement indépendants qui génèrent $V$. Autrement dit, tout vecteur de $V$ peut être écrit de manière unique comme une combinaison linéaire des vecteurs de la base.
+
+\textbf{Dimension:}
+La dimension d'un espace vectoriel $V$ est le nombre de vecteurs dans une base de $V$. Si $V$ possède une base finie, on dit que $V$ est de dimension finie.
+
 \subsection{Matrices \& Applications en physique}
 
 \subsubsection{Généralités}
@@ -220,6 +309,53 @@ Les matrices Jacobiennes sont utilisée en physique pour étudier des systèmes 
 
 
 \subsection{Noyau, Image}
+
+\textbf{Définition du noyau:}
+Le noyau d'une application linéaire $F : V \to W$ entre deux espaces vectoriels $V$ et $W$ est l'ensemble des vecteurs de $V$ qui sont envoyés sur le vecteur nul de $W$. Il est noté $\ker(F)$ et défini par :
+\[
+\ker(F) = \{ v \in V \mid F(v) = 0 \}
+\]
+
+\textbf{Définition de l'image:}
+L'image d'une application linéaire $F : V \to W$ est l'ensemble des vecteurs de $W$ qui sont des images de vecteurs de $V$. Elle est notée $\operatorname{Im}(F)$ et définie par :
+\[
+\operatorname{Im}(F) = \{ w \in W \mid \exists v \in V, F(v) = w \}
+\]
+
+\textbf{Théorème du rang:}
+Pour une application linéaire $F : V \to W$ entre deux espaces vectoriels de dimension finie, la somme des dimensions du noyau et de l'image de $F$ est égale à la dimension de $V$. Ce théorème est connu sous le nom de théorème du rang ou théorème de la dimension :
+\[
+\dim(\ker(F)) + \dim(\operatorname{Im}(F)) = \dim(V)
+\]
+
+\textbf{Théorème de la dimension:}
+Si $F : V \to W$ est une application linéaire entre deux espaces vectoriels de dimension finie, alors :
+\[
+\dim(V) = \dim(\ker(F)) + \dim(\operatorname{Im}(F))
+\]
+
+\textbf{Exemple:}
+Considérons l'application linéaire $F : \mathbb{R}^3 \to \mathbb{R}^2$ définie par :
+\[
+F(x, y, z) = (x + y, y + z)
+\]
+Le noyau de $F$ est donné par :
+\[
+\ker(F) = \{ (x, y, z) \in \mathbb{R}^3 \mid x + y = 0 \text{ et } y + z = 0 \}
+\]
+L'image de $F$ est donnée par :
+\[
+\operatorname{Im}(F) = \{ (u, v) \in \mathbb{R}^2 \mid \exists (x, y, z) \in \mathbb{R}^3, F(x, y, z) = (u, v) \}
+\]
+
+\textbf{Propriétés:}
+\begin{itemize}
+    \item Le noyau d'une application linéaire est un sous-espace vectoriel de l'espace de départ.
+    \item L'image d'une application linéaire est un sous-espace vectoriel de l'espace d'arrivée.
+    \item Une application linéaire est injective si et seulement si son noyau est réduit au vecteur nul.
+    \item Une application linéaire est surjective si et seulement si son image est égale à l'espace d'arrivée.
+\end{itemize}
+
 \subsection{Corps, Anneaux, Groupes}
 
 \subsubsection{Groupes}
@@ -290,36 +426,34 @@ La théorie de Galois étudie les extensions de corps et les solutions des équa
 \textbf{Théorème fondamental de la théorie de Galois:}
 
 Il existe une correspondance bijective entre les sous-groupes du groupe de Galois d'une extension de corps et les sous-corps intermédiaires de cette extension.
-\subsubsection{Magmas}
 
-\textbf{Définition:}
+
+\textbf{Magmas:}
+
 Un magma est un ensemble $M$ muni d'une opération binaire $\cdot : M \times M \to M$.
 
-\subsubsection{Monoïdes}
+\textbf{Monoïdes:}
 
-\textbf{Définition:}
 Un monoïde est un magma $(M, \cdot)$ qui satisfait les axiomes suivants :
 \begin{itemize}
     \item \textbf{Associativité:} Pour tout $a, b, c \in M$, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$.
     \item \textbf{Élément neutre:} Il existe un élément $e \in M$ tel que pour tout $a \in M$, $a \cdot e = e \cdot a = a$.
 \end{itemize}
 
-\subsubsection{Semi-groupes}
+\textbf{Semi-groupes:}
 
-\textbf{Définition:}
+
 Un semi-groupe est un magma $(S, \cdot)$ qui satisfait l'axiome d'associativité :
 \begin{itemize}
     \item \textbf{Associativité:} Pour tout $a, b, c \in S$, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$.
 \end{itemize}
 
-\subsubsection{Anneaux intègres}
+\textbf{Anneaux intègres:}
 
-\textbf{Définition:}
 Un anneau intègre est un anneau commutatif $(R, +, \cdot)$ sans diviseurs de zéro, c'est-à-dire que pour tout $a, b \in R$, si $a \cdot b = 0$, alors $a = 0$ ou $b = 0$.
 
-\subsubsection{Corps finis}
+\textbf{Corps finis:}
 
-\textbf{Définition:}
 Un corps fini est un corps $(K, +, \cdot)$ contenant un nombre fini d'éléments.
 
 \textbf{Exemples:}
@@ -328,9 +462,8 @@ Un corps fini est un corps $(K, +, \cdot)$ contenant un nombre fini d'éléments
     \item $\mathbb{F}_{p^n}$, une extension de degré $n$ du corps $\mathbb{F}_p$.
 \end{itemize}
 
-\subsubsection{Algèbres}
+\textbf{Algèbres:}
 
-\textbf{Définition:}
 Une algèbre sur un corps $K$ est un espace vectoriel $A$ sur $K$ muni d'une opération bilinéaire $\cdot : A \times A \to A$.
 
 \textbf{Exemples:}
@@ -339,19 +472,17 @@ Une algèbre sur un corps $K$ est un espace vectoriel $A$ sur $K$ muni d'une op�
     \item Les algèbres de polynômes $K[x]$.
 \end{itemize}
 
-\subsubsection{Algèbres associatives}
+\textbf{Algèbres associatives:}
 
-\textbf{Définition:}
 Une algèbre associative est une algèbre $(A, \cdot)$ telle que pour tout $a, b, c \in A$, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$.
 
-\subsubsection{Algèbres commutatives}
+\textbf{Algèbres commutatives:}
 
-\textbf{Définition:}
+
 Une algèbre commutative est une algèbre $(A, \cdot)$ telle que pour tout $a, b \in A$, $a \cdot b = b \cdot a$.
 
-\subsubsection{Algèbres de Lie}
+\textbf{Algèbres de Lie:}
 
-\textbf{Définition:}
 Une algèbre de Lie est un espace vectoriel $L$ muni d'une opération bilinéaire $[\cdot, \cdot] : L \times L \to L$ appelée crochet de Lie, satisfaisant les axiomes suivants :
 \begin{itemize}
     \item \textbf{Antisymétrie:} Pour tout $x, y \in L$, $[x, y] = -[y, x]$.
