@@ -33,4 +33,3 @@
 \contentsline {subsection}{\numberline {2.5}Développements limités et formule de Taylor}{20}{}%
 \contentsline {subsubsection}{\numberline {2.5.1}Formule de Taylor-Lagrange}{20}{}%
 \contentsline {subsubsection}{\numberline {2.5.2}Formule de Taylor-Young:}{20}{}%
-\contentsline {section}{\numberline {3}Preuves}{22}{}%
