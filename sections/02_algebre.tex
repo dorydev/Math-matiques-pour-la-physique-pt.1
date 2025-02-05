@@ -1,47 +1,46 @@
 \section{Algèbre}
 \subsection{Polynômes}
 \textbf{Définition:}
-Un polynôme $P(x)$ à coefficients dans un corps $K$ est une expression de la forme :
+Un polynôme $P(x)$ à coefficients constants dans un corps $\mathbb{K}$ est de la forme :
 \[
 P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
 \]
-où $a_i \in K$ pour tout $i$ et $a_n \neq 0$. Le degré de $P(x)$ est $n$.
+où $a_i \in K$ pour tout $i$ et $a_n \neq 0$. Le degré de $P(x)$ est $n$. \\
+
 
 \textbf{Théorème fondamental de l'algèbre:}
-Tout polynôme non constant à coefficients complexes a au moins une racine complexe.
+Tout polynôme non constant à coefficients complexes a au moins une racine complexe. \\
+
 
 \textbf{Division de polynômes:}
-Soient $A(x)$ et $B(x)$ deux polynômes avec $B(x) \neq 0$. Il existe des polynômes uniques $Q(x)$ et $R(x)$ tels que :
+Soient $A(x)$ et $B(x)$ deux polynômes avec $B(x) \neq 0$. Alors il existe des polynômes uniques $Q(x)$ et $R(x)$ tels que :
 \[
 A(x) = B(x) Q(x) + R(x)
 \]
-où le degré de $R(x)$ est strictement inférieur au degré de $B(x)$.
+où le degré de $R(x)$ est strictement inférieur au degré de $B(x)$. \\
+
 
 \textbf{Décomposition en éléments simples:}
-Tout polynôme $P(x)$ à coefficients réels peut être décomposé en produit de polynômes de degré 1 et de polynômes quadratiques irréductibles sur $\mathbb{R}$. Sur $\mathbb{C}$, tout polynôme peut être décomposé en produit de polynômes de degré 1.
+Tout polynôme $P(x)$ à coefficients réels peut être décomposé en produit de polynômes de degré 1 et de polynômes irréductibles sur $\mathbb{R}$. Sur $\mathbb{C}$, tout polynôme peut être décomposé en produit de polynômes de degré 1. \\
 
 \textbf{Exemple:}
-Soit $P(x) = x^3 - 6x^2 + 11x - 6$. Les racines de $P(x)$ sont $x = 1, 2, 3$. On peut écrire :
+Soit $P(x) = x^3 - 6x^2 + 11x - 6$, les racines de $P(x)$ sont $x = 1, 2, 3$. \\
+On peut écrire :
 \[
 P(x) = (x - 1)(x - 2)(x - 3)
-\]
-
-\textbf{Théorème de Bézout:}
-Soient $A(x)$ et $B(x)$ deux polynômes non nuls. Le plus grand commun diviseur (PGCD) de $A(x)$ et $B(x)$ peut être exprimé comme une combinaison linéaire de $A(x)$ et $B(x)$ :
-\[
-d(x) = A(x) u(x) + B(x) v(x)
-\]
-où $d(x)$ est le PGCD et $u(x)$, $v(x)$ sont des polynômes.
+\] \\
 
 \textbf{Théorème de la racine multiple:}
-Un polynôme $P(x)$ a une racine multiple $r$ si et seulement si $r$ est aussi une racine de sa dérivée $P'(x)$.
+Un polynôme $P(x)$ a une racine multiple $r$ si et seulement si $r$ est aussi une racine de sa dérivée $P'(x)$. \\
+
 
 \textbf{Théorème de la décomposition en éléments simples:}
 Soit $P(x)$ un polynôme à coefficients réels. On peut écrire :
 \[
 P(x) = c (x - r_1)^{m_1} (x - r_2)^{m_2} \cdots (x^2 + b_1 x + c_1)^{n_1} (x^2 + b_2 x + c_2)^{n_2} \cdots
 \]
-où $r_i$ sont les racines réelles, $x^2 + b_i x + c_i$ sont les polynômes quadratiques irréductibles, et $c$ est une constante.
+où $r_i$ sont les racines réelles, $x^2 + b_i x + c_i$ sont les polynômes irréductibles, et $c$ une constante. \\
+
 
 \textbf{Exemple:}
 Soit $P(x) = x^4 - 5x^2 + 6$. On peut écrire :
@@ -49,46 +48,47 @@ Soit $P(x) = x^4 - 5x^2 + 6$. On peut écrire :
 P(x) = (x^2 - 2)(x^2 - 3)
 \]
 
+
 \subsection{Introduction \& Espaces vectoriels}
 
+
 \textbf{Définition:}
-Un espace vectoriel sur un corps $K$ est un ensemble $E$ muni de deux opérations :
+Soit $E$ un ensemble et $\mathbb{K}$ un corps. Un espace vectoriel sur $\mathbb{K}$ est un ensemble $E$ muni de deux lois définies comme suit :
 \begin{itemize}
-    \item \textbf{Addition:} Une opération $+ : V \times V \to V$ qui associe à chaque couples de vecteurs $(u, v)$ un vecteur $u + v$.
-    \item \textbf{Multiplication:} Une opération $\cdot : K \times V \to V$ qui associe à chaque scalaire $a \in K$ et chaque vecteur $v \in V$ un vecteur $a \cdot v$.
+    \item Une loi de composition interne $+$, $\forall u, v \in E$, $u + v \in E$.
+    \item Une loi de composition externe $\cdot$, $\forall a \in K$ et $v \in E$, $a \cdot v \in E$.
 \end{itemize}
 $\forall$ $u, v, w \in V$ et tout $a, b \in K$ :
 \begin{itemize}
-    \item \textbf{Associativité de l'addition:} $(u + v) + w = u + (v + w)$.
-    \item \textbf{Élément neutre de l'addition:} Il existe un élément $0 \in V$ tel que $u + 0 = u$.
-    \item \textbf{Inverse de l'addition:} Pour tout $u \in V$, il existe un élément $-u \in V$ tel que $u + (-u) = 0$.
-    \item \textbf{Commutativité de l'addition:} $u + v = v + u$.
-    \item \textbf{Compatibilité de la multiplication scalaire avec la multiplication dans $K$:} $a \cdot (b \cdot v) = (a \cdot b) \cdot v$.
-    \item \textbf{Élément neutre de la multiplication scalaire:} $1 \cdot v = v$ pour tout $v \in V$, où $1$ est l'élément neutre de $K$.
-    \item \textbf{Distributivité de la multiplication scalaire par rapport à l'addition vectorielle:} $a \cdot (u + v) = a \cdot u + a \cdot v$.
-    \item \textbf{Distributivité de la multiplication scalaire par rapport à l'addition scalaire:} $(a + b) \cdot v = a \cdot v + b \cdot v$.
+    \item \textbf{Associativité +:} $(u + v) + w = u + (v + w)$.
+    \item \textbf{Élément neutre de +:} Il existe un élément $0 \in V$ tel que $u + 0 = u$.
+    \item \textbf{Inverse de +:} Pour tout $u \in V$, il existe un élément $-u \in V$ tel que $u + (-u) = 0$.
+    \item \textbf{Commutativité de +:} $u + v = v + u$.
+    \item \textbf{Commutativité de x:} $a \cdot (b \cdot v) = (a \cdot b) \cdot v$.
+    \item \textbf{Élément neutre de x :} $1 \cdot v = v$ pour tout $v \in V$, où $1$ est l'élément neutre de $K$.
+    \item \textbf{Distributivité de x:} $a \cdot (u + v) = a \cdot u + a \cdot v$.
+    \item \textbf{Distributivité de x:} $(a + b) \cdot v = a \cdot v + b \cdot v$.
 \end{itemize}
 
-\textbf{Exemples:}
-\begin{itemize}
-    \item L'ensemble $\mathbb{R}^n$ des $n$-uplets de réels est un espace vectoriel sur $\mathbb{R}$.
-    \item L'ensemble des polynômes à coefficients dans $\mathbb{R}$ est un espace vectoriel sur $\mathbb{R}$.
-\end{itemize}
+\textbf{Exemples:} \\
+L'ensemble $\mathbb{R}^n$ des $n$-uplets de réels est un espace vectoriel sur $\mathbb{R}$.\\
+L'ensemble des polynômes à coefficients dans $\mathbb{R}$ est un espace vectoriel sur $\mathbb{R}$.\\
+
 
 \textbf{Théorème:}
-Tout sous-espace vectoriel d'un espace vectoriel est lui-même un espace vectoriel.
+Tout sous-espace vectoriel d'un espace vectoriel est un espace vectoriel. \\
 
 \textbf{Combinaison linéaire:}
-Une combinaison linéaire de vecteurs $v_1, v_2, \ldots, v_n \in V$ est une expression de la forme $a_1 v_1 + a_2 v_2 + \cdots + a_n v_n$ où $a_1, a_2, \ldots, a_n \in K$.
+Une combinaison linéaire de vecteurs $v_1, v_2, \ldots, v_n \in E$ est une expression de la forme $a_1 v_1 + a_2 v_2 + \cdots + a_n v_n$ où $a_1, a_2, \ldots, a_n \in K$. \\
 
 \textbf{Indépendance linéaire:}
-Les vecteurs $v_1, v_2, \ldots, v_n \in V$ sont linéairement indépendants si la seule combinaison linéaire qui donne le vecteur nul est la combinaison triviale : $a_1 v_1 + a_2 v_2 + \cdots + a_n v_n = 0$ implique $a_1 = a_2 = \cdots = a_n = 0$.
+Les vecteurs $v_1, v_2, \ldots, v_n \in E$ sont linéairement indépendants si la seule combinaison linéaire qui donne le vecteur nul est la combinaison triviale : $a_1 v_1 + a_2 v_2 + \cdots + a_n v_n = 0$ implique $a_1 = a_2 = \cdots = a_n = 0$. \\
 
 \textbf{Base:}
-Une base d'un espace vectoriel $V$ est un ensemble de vecteurs linéairement indépendants qui génèrent $V$. Autrement dit, tout vecteur de $V$ peut être écrit de manière unique comme une combinaison linéaire des vecteurs de la base.
+Une base d'un espace vectoriel $E$ est un ensemble de vecteurs linéairement indépendants qui génèrent $E$. Autrement dit, tout vecteur de $E$ peut être écrit de manière unique comme une combinaison linéaire des vecteurs de la base. \\
 
 \textbf{Dimension:}
-La dimension d'un espace vectoriel $V$ est le nombre de vecteurs dans une base de $V$. Si $V$ possède une base finie, on dit que $V$ est de dimension finie.
+La dimension d'un espace vectoriel $E$ est le nombre de vecteurs dans une base de $E$. Si $E$ possède une base finie, on dit que $E$ est de dimension finie. \\
 
 \subsection{Matrices \& Applications en physique}
 
@@ -104,7 +104,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 \end{pmatrix}
 \]
 
-On appelle \textit{transposée} de $\mathcal{A}$ la matrice notée $\mathcal{A}^T$ de taille $n \times m$ telle que pour tout $i \in \{1, \ldots, m\}$ et $j \in \{1, \ldots, n\}$, on a $\mathcal{A}^T_{j,i} = \mathcal{A}_{i,j}$.
+On appelle \textit{transposée} de $\mathcal{A}$ la matrice notée $\mathcal{A}^T$ de taille $n \times m$ telle que pour tout $i \in \{1, \ldots, m\}$ et $j \in \{1, \ldots, n\}$, on a $\mathcal{A}^T_{j,i} = \mathcal{A}_{i,j}$. \\
 
 
 \textbf{Multiplication de matrices:}
@@ -113,7 +113,7 @@ Soient $\mathcal{A} \in \mathcal{M}_{m,n}(\mathbb{R})$ et $\mathcal{B} \in \math
 \[
 \mathcal{C}_{i,j} = \sum_{k=1}^{n} \mathcal{A}_{i,k} \mathcal{B}_{k,j}
 \]
-pour tout $i \in \{1, \ldots, m\}$ et $j \in \{1, \ldots, p\}$.
+pour tout $i \in \{1, \ldots, m\}$ et $j \in \{1, \ldots, p\}$. \\
 
 \textbf{Exemple:}
 
@@ -152,7 +152,7 @@ Calculons le produit $\mathcal{A} \mathcal{B}$ :
 58 & 64 \\
 139 & 154
 \end{pmatrix}
-\]
+\] \\
 
 \textbf{Propriétés de la transposée:}
 
@@ -165,7 +165,7 @@ Pour deux matrices $\mathcal{A}$ et $\mathcal{B}$ de tailles compatibles, on a :
 \]
 \[
 (\mathcal{A} \mathcal{B})^T = \mathcal{B}^T \mathcal{A}^T
-\]
+\] \\
 
 \textbf{Inverse d'une matrice:}
 
@@ -173,7 +173,7 @@ Une matrice $\mathcal{A} \in \mathcal{M}_{n,n}(\mathbb{R})$ est dite inversible 
 \[
 \mathcal{A} \mathcal{B} = \mathcal{B} \mathcal{A} = \mathcal{I}_n
 \]
-où $\mathcal{I}_n$ est la matrice identité de taille $n$. La matrice $\mathcal{B}$ est alors unique et est notée $\mathcal{A}^{-1}$.
+où $\mathcal{I}_n$ est la matrice identité de taille $n$. La matrice $\mathcal{B}$ est alors unique et est notée $\mathcal{A}^{-1}$. \\
 
 \textbf{Propriétés de l'inverse:}
 
@@ -311,19 +311,19 @@ Les matrices Jacobiennes sont utilisée en physique pour étudier des systèmes 
 \subsection{Noyau, Image}
 
 \textbf{Définition du noyau:}
-Le noyau d'une application linéaire $F : V \to W$ entre deux espaces vectoriels $V$ et $W$ est l'ensemble des vecteurs de $V$ qui sont envoyés sur le vecteur nul de $W$. Il est noté $\ker(F)$ et défini par :
+Le noyau d'une application linéaire $F : V \to W$ entre deux espaces vectoriels $E$ et $W$ est l'ensemble des vecteurs de $E$ qui sont envoyés sur le vecteur nul de $W$. Il est noté $\ker(F)$ et défini par :
 \[
 \ker(F) = \{ v \in V \mid F(v) = 0 \}
 \]
 
 \textbf{Définition de l'image:}
-L'image d'une application linéaire $F : V \to W$ est l'ensemble des vecteurs de $W$ qui sont des images de vecteurs de $V$. Elle est notée $\operatorname{Im}(F)$ et définie par :
+L'image d'une application linéaire $F : V \to W$ est l'ensemble des vecteurs de $W$ qui sont des images de vecteurs de $E$. Elle est notée $\operatorname{Im}(F)$ et définie par :
 \[
 \operatorname{Im}(F) = \{ w \in W \mid \exists v \in V, F(v) = w \}
 \]
 
 \textbf{Théorème du rang:}
-Pour une application linéaire $F : V \to W$ entre deux espaces vectoriels de dimension finie, la somme des dimensions du noyau et de l'image de $F$ est égale à la dimension de $V$. Ce théorème est connu sous le nom de théorème du rang ou théorème de la dimension :
+Pour une application linéaire $F : V \to W$ entre deux espaces vectoriels de dimension finie, la somme des dimensions du noyau et de l'image de $F$ est égale à la dimension de $E$. Ce théorème est connu sous le nom de théorème du rang ou théorème de la dimension :
 \[
 \dim(\ker(F)) + \dim(\operatorname{Im}(F)) = \dim(V)
 \]
